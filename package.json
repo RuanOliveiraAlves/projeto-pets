@@ -1,0 +1,24 @@
+{
+  "name": "projeto-pets",
+  "version": "1.0.0",
+  "description": "## Estrutura ``` projeto-pets/   backend/     .env     package.json     src/       db.js       server.js   frontend/     index.html     style.css     script.js   sql/     setup.sql ```",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "nodemon backend/src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "knex": "^3.1.0",
+    "mysql2": "^3.14.3",
+    "pg": "^8.16.3"
+  }
+}
