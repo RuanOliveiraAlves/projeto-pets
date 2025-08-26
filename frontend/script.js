@@ -41,13 +41,25 @@ btn.addEventListener('click', async () => {
   }
 });
 
-// Filtro apenas por codpet, nome, raca e especie
+const filtroCod = document.getElementById('filtroCod');
+
+// Filtro específico por código
+filtroCod.addEventListener('input', () => {
+  const q = filtroCod.value.trim();
+  if (!q) return render(dados);
+
+  const filtrados = dados.filter(p => p.codpet === parseInt(q));
+  render(filtrados);
+});
+
+
+// Filtro apenas por  nome, raca e especie
 filtro.addEventListener('input', () => {
   const q = filtro.value.trim().toLowerCase();
   if (!q) return render(dados);
 
   const filtrados = dados.filter(p => {
-    return [p.codpet, p.nome, p.raca, p.especie]
+    return [p.nome, p.raca, p.especie]
       .some(v => (v ?? '').toString().toLowerCase().includes(q));
   });
 

@@ -1,38 +1,80 @@
-<!doctype html>
-<html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Consulta de Pets</title>
-  <link rel="stylesheet" href="./style.css" />
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PetZ - Home</title>
+  <link rel="stylesheet" href="./style/index.css">
 </head>
 <body>
-  <main class="container">
-    <h1>Sistema de Consulta de Pets</h1>
 
-    <div class="actions">
-      <button id="btnConsultar">Consultar Pets</button>
-      <input id="filtro" type="text" placeholder="Filtrar por nome, espécie, raça..." />
+  <!-- Header -->
+  <header>
+    <div class="logo">🐾 PetZ</div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Serviços</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Preços</a></li>
+        <li><a href="#">Galeria</a></li>
+        <li><a href="#">Adoção</a></li>
+        <li><a href="consulta.html">Consultar Pets</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero / Slider -->
+  <section class="hero-slider">
+
+    <!-- Slide 1 -->
+    <div class="slide active" style="background-image: url('../img/pet1.jpg')">
+      <div class="overlay"></div>
+      <div class="hero-content">
+        <h1>Encontre seu novo melhor amigo 🐶</h1>
+        <p>Temos pets esperando por você!</p>
+        <a href="consulta.html" class="btn">Consultar Pets</a>
+      </div>
     </div>
 
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr>
-            <th>Código</th>
-            <th>Nome</th>
-            <th>Espécie</th>
-            <th>Raça</th>
-            <th>Peso</th>
-            <th>Nascimento</th>
-          </tr>
-        </thead>
-        <tbody id="tbody"></tbody>
-      </table>
+    <!-- Slide 2 -->
+    <div class="slide" style="background-image: url('../img/pet2.jpg')">
+      <div class="overlay"></div>
+      <div class="hero-content">
+        <h1>Adote com amor ❤️</h1>
+        <p>Dê a um pet a chance de ter um lar.</p>
+        <a href="#" class="btn">Saiba Mais</a>
+      </div>
     </div>
-  </main>
 
-  <script src="./script.js"></script>
+    <!-- Slide 3 -->
+    <div class="slide" style="background-image: url('../img/pet3.jpg')">
+      <div class="overlay"></div>
+      <div class="hero-content">
+        <h1>Ofertas especiais 🐾</h1>
+        <p>Confira nossos serviços e promoções.</p>
+        <a href="#" class="btn">Ver Ofertas</a>
+      </div>
+    </div>
+
+    <!-- Setas -->
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+
+    <!-- Bolinhas -->
+    <div class="dots"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+  <div class="footer-info">
+    <span>📍 Volta Redonda - Santo Agostinho</span>
+    <span>✉️ petshop@site.com</span>
+    <span>📞 (21) 99999-9999</span>
+  </div>
+  <p>&copy; 2025 PetZ - Todos os direitos reservados.</p>
+</footer>
+  <script src="./index.js"></script>
 </body>
 </html>

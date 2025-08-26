@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PetZ</title>
+  <link rel="stylesheet" href="./style/consulta.css" />
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  <main class="container">
+    <h1>Sistema de Consulta de Pets</h1>
+
+    <div class="actions">
+      <button id="btnConsultar">Consultar Pets</button>
+  <input id="filtroCod" type="number" placeholder="Filtrar por Código do Pet" />
+      <input id="filtro" type="text" placeholder="Filtrar por nome, espécie, raça..." />
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Código</th>
+            <th>Nome</th>
+            <th>Espécie</th>
+            <th>Raça</th>
+            <th>Peso</th>
+            <th>Nascimento</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
