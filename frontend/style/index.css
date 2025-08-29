@@ -1,96 +1,111 @@
-/* Reset */
+/* ===========================
+   RESET DE ESTILOS
+   =========================== */
+/* Remove margens e padding padrão de todos os elementos e define box-sizing */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  box-sizing: border-box; /* Faz com que padding e border não aumentem a largura total */
+  font-family: Arial, sans-serif; /* Fonte padrão do site */
 }
 
-/* Topbar */
+/* ===========================
+   TOPBAR
+   =========================== */
 .topbar {
-  background: #B321FC; /* Rosa forte */
-  color: white;
-  padding: 5px 20px;
-  font-size: 0.9rem;
-  display: flex;
-  justify-content: space-between;
+  background: #2C2C2C; /* Cor escura */
+  color: white; /* Texto branco */
+  padding: 5px 20px; /* Espaçamento interno */
+  font-size: 0.9rem; /* Tamanho da fonte */
+  display: flex; /* Layout flexível */
+  justify-content: space-between; /* Espaço entre itens */
 }
 
-/* Header */
+/* ===========================
+   HEADER
+   =========================== */
 header {
-  background: white;
+  background: #0b5827dc; /* Verde escuro com transparência */
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-between; /* Espaço entre logo e menu */
+  align-items: center; /* Alinha verticalmente */
   padding: 15px 20px;
-  position: sticky;
+  position: sticky; /* Fica fixo no topo ao rolar */
   top: 0;
-  z-index: 10;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  z-index: 10; /* Fica acima de outros elementos */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* Sombra leve */
 }
 
+/* Logo */
 .logo {
-  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 1.5rem;
-  color: #FC217C;
+  color: #F5F5F5; /* Branco suave */
+  text-decoration: none; /* Remove sublinhado */
 }
 
+/* ===========================
+   MENU DE NAVEGAÇÃO
+   =========================== */
 nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
+  list-style: none; /* Remove marcadores */
+  display: flex; /* Lista horizontal */
+  gap: 20px; /* Espaçamento entre itens */
 }
 
 nav a {
-  text-decoration: none;
-  color: #333;
+  text-decoration: none; /* Remove sublinhado */
+  color: #EAEAEA; /* Cor clara */
   font-weight: bold;
-  transition: color 0.3s;
+  transition: color 0.3s; /* Animação suave ao passar mouse */
 }
 
 nav a:hover {
-  color: #B321FC;
+  color: #cecece; /* Tom mais claro ao passar mouse */
 }
 
-/* Hero Slider */
+/* ===========================
+   HERO / SLIDER
+   =========================== */
 .hero-slider {
   position: relative;
-  height: 90vh;
+  height: 90vh; /* Altura relativa à tela */
   overflow: hidden;
+  background: #101010; /* Fundo escuro */
 }
 
 .slide {
   position: absolute;
-  top: 0; left: 100%;
+  top: 0; left: 100%; /* Fora da tela inicialmente */
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  padding-left: 10%;
-  transition: left 0.8s ease-in-out;
+  background-size: cover; /* Imagem cobre todo o slide */
+  background-position: center; /* Centraliza a imagem */
+  display: flex; 
+  align-items: center; 
+  padding-left: 10%; 
+  transition: left 0.8s ease-in-out; /* Transição suave */
 }
 
 .slide.active {
-  left: 0;
+  left: 0; /* Slide ativo */
 }
 
 .overlay {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: linear-gradient(to right, rgb(252, 57, 187) 40%, rgba(0, 0, 0, 0));
+  background: linear-gradient(to right, rgba(20, 20, 20, 0.74) 40%, rgba(0, 0, 0, 0)); /* Sombra sobre a imagem */
 }
 
 .hero-content {
-  position: relative;
+  position: relative; 
   color: white;
-  max-width: 500px;
+  max-width: 500px; /* Largura máxima do conteúdo */
 }
 
 .hero-content h1 {
-  font-size: 2.5rem;
+  font-size: 2.5rem; 
   margin-bottom: 15px;
 }
 
@@ -102,19 +117,21 @@ nav a:hover {
 .btn {
   display: inline-block;
   padding: 12px 25px;
-  background: #FC217C;
+  background: #0b5827dc; /* Verde escuro */
   color: white;
   text-decoration: none;
-  border-radius: 8px;
+  border-radius: 8px; 
   font-weight: bold;
   transition: background 0.3s;
 }
 
 .btn:hover {
-  background: #FC5321;
+  background: #3858B8; /* Azul ao passar o mouse */
 }
 
-/* Setas */
+/* ===========================
+   SETAS DO SLIDER
+   =========================== */
 .prev, .next {
   position: absolute;
   top: 50%;
@@ -122,7 +139,7 @@ nav a:hover {
   background: rgba(0,0,0,0.5);
   color: white;
   border: none;
-  font-size: 2rem;
+  font-size: 1.4rem;
   padding: 10px;
   cursor: pointer;
   z-index: 5;
@@ -131,7 +148,9 @@ nav a:hover {
 .prev { left: 10px; }
 .next { right: 10px; }
 
-/* Bolinhas */
+/* ===========================
+   BOLINHAS DO SLIDER
+   =========================== */
 .dots {
   position: absolute;
   bottom: 20px;
@@ -146,32 +165,86 @@ nav a:hover {
   height: 12px;
   border-radius: 50%;
   border: none;
-  background: rgba(255,255,255,0.6);
+  background: rgba(255,255,255,0.5);
   cursor: pointer;
 }
 
 .dots button.active {
-  background: #FC217C;
+  background: white;
 }
 
-/* Footer */
+/* ===========================
+   CARDS DE SERVIÇOS
+   =========================== */
+
+.section-title{
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.cards-container {
+  display: flex; /* Layout horizontal */
+  justify-content: center; /* Centraliza na página */
+  gap: 20px; /* Espaço entre os cards */
+  padding: 50px 20px; /* Espaço interno */
+  flex-wrap: wrap; /* Quebra de linha em telas menores */
+}
+
+.card {
+  background: #1c1c1c; /* Fundo escuro para contrastar com o fundo geral */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* Sombra mais visível no fundo escuro */
+  width: 250px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Leve elevação ao passar mouse */
+  box-shadow: 0 6px 16px rgba(0,0,0,0.4); /* Sombra mais forte */
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+color: rgba(21, 255, 0, 0.781);
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #EAEAEA; /* Texto claro */
+}
+.card-cta{
+  margin-top: 15px;       /* Empurra o botão para a parte inferior do card */
+  background: #0b5827dc;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  text-align: center;
+  transition: background 0.3s;
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
 footer {
-  background: #B321FC;
+  background: #0b5827dc; 
   color: white;
   text-align: center;
   padding: 20px;
 }
 
 .footer-info {
-  display: flex;
+  display: flex; 
   justify-content: center;
-  gap: 8px; /* espaçamento */
+  gap: 8px; 
   margin-bottom: 10px;
   font-size: 0.9rem;
+  color: #EAEAEA;
 }
 
 footer p {
   font-size: 0.85rem;
   opacity: 0.9;
 }
-

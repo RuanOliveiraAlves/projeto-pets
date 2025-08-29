@@ -6,6 +6,53 @@
   font-family: Arial, sans-serif;
 }
 
+/* Topbar */
+.topbar {
+  background: #2C2C2C; 
+  color: white;
+  padding: 5px 20px;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Header */
+header {
+  background: #0b5827dc; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.logo {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 1.5rem;
+  color: #F5F5F5; 
+  text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #EAEAEA; 
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #cecece;
+}
+
 /* Container principal */
 .container {
   max-width: 900px;
@@ -13,7 +60,7 @@
   padding: 20px;
   background-color: white;
   border-radius: 10px;
-  box-shadow: 0 0px 15px #FC217C;
+  box-shadow: 0 0px 15px oklch(86.924% 0.29095 141.797);
 }
 
 /* Título */
@@ -41,7 +88,7 @@ h1 {
 }
 
 .actions button {
-  background-color: #FC217C;
+  background-color: #0b5827dc;
   color: white;
   cursor: pointer;
   border: none;
@@ -49,7 +96,7 @@ h1 {
 }
 
 .actions button:hover {
-  background-color: #FC5321;
+  background-color: #3858B8;
 }
 
 .actions input {
@@ -69,7 +116,7 @@ table {
 }
 
 thead {
-  background-color: #FC217C;
+  background-color: #0b5827dc;
   color: white;
 }
 
