@@ -1,8 +1,7 @@
-// knexfile.js
+const path = require('path');
 require('dotenv').config();
 
 module.exports = {
-
   development: {
     client: 'pg',
     connection: {
@@ -14,22 +13,21 @@ module.exports = {
       ssl: process.env.PGSSL === 'true' ? { rejectUnauthorized: false } : false
     },
     migrations: {
-      directory: './migrations'
+      directory: path.resolve(__dirname, 'migrations')
     },
     seeds: {
-      directory: './seeds'
+      directory: path.resolve(__dirname, 'seeds')  // <- nova pasta
     }
   },
 
   production: {
     client: 'pg',
-    connection: process.env.DATABASE_URL, // para produção, normalmente usado no Heroku
+    connection: process.env.DATABASE_URL,
     migrations: {
-      directory: './migrations'
+      directory: path.resolve(__dirname, 'migrations')
     },
     seeds: {
-      directory: './seeds'
+      directory: path.resolve(__dirname, 'seeds')  // <- nova pasta
     }
   }
-
 };

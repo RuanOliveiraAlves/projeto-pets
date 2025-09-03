@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Pets</title>
+  <link rel="stylesheet" href="./style/cadastro.css"> 
+</head>
+<body>
+
+    <!-- Header -->
+  <header> 
+    <div class="logo"> 
+      <a href="index.html" class="logo">PetZ</a> 
+    </div> 
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Serviços</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Preços</a></li>
+        <li><a href="cadastro.html">Cadastre Aqui!</a></li>
+        <li><a href="#">Adoção</a></li>
+        <li><a href="consulta.html">Consultar Pets</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<!-- Formulário de cadastro -->
+<form id="formPet">
+  <h1 id="tit2cadform">Cadastro</h1>
+  <label>Nome:
+    <input type="text" id="nome" required placeholder="Nome do Pet">
+  </label>
+  <label>Espécie:
+    <select id="especie" required>
+      <option value="">Selecione</option>
+      <option value="Cão">Cão</option>
+      <option value="Gato">Gato</option>
+    </select>
+  </label>
+  <label>Raça:
+    <input type="text" id="raca" required>
+  </label>
+  <label>Peso (kg):
+    <input type="number" id="peso" step="0.01" required>
+  </label>
+  <label>Data de Nascimento:
+    <input type="date" id="datanasc" required>
+  </label>
+  <button type="submit">Cadastrar Pet</button>
+</form>
+
+<!-- Tabela que mostrará os pets cadastrados -->
+<h2>Lista de Pets</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Código</th>
+      <th>Nome</th>
+      <th>Espécie</th>
+      <th>Raça</th>
+      <th>Peso</th>
+      <th>Data Nascimento</th>
+    </tr>
+  </thead>
+  <tbody id="tbody"></tbody>
+</table>
+
+  <!-- Footer -->
+  <footer>
+  <div class="footer-info">
+    <span> Volta Redonda - Santo Agostinho</span>
+    <span> petshop@site.com</span>
+    <span> (21) 99999-9999</span>
+  </div>
+  <p>&copy; 2025 PetZ - Todos os direitos reservados.</p>
+</footer>
+
+<!-- Script JS separado -->
+<script src="cadastro.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+</html>

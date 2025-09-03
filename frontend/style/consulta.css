@@ -138,3 +138,35 @@ th, td {
     font-size: 0.9rem;
   }
 }
+
+/* ===========================
+   FOOTER
+   =========================== */
+footer {
+  background: #0b5827dc; 
+  color: #fff;
+  text-align: center;
+  padding: 20px 15px;
+  margin-top: 40px; /* espaçamento em relação ao conteúdo */
+}
+
+.footer-info {
+  display: flex; 
+  flex-wrap: wrap; /* quebra em telas pequenas */
+  justify-content: center;
+  gap: 15px; 
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  color: #EAEAEA;
+}
+
+.footer-info span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+footer p {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}

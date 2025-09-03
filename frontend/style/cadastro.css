@@ -1,0 +1,202 @@
+/* ===========================
+   RESET
+   =========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+    
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  /* Imagem de fundo */
+  background-image: url('../images/pets04.jpg'); /* caminho da sua imagem */
+  background-size: cover;        /* cobre toda a tela */
+  background-position: center;   /* centraliza a imagem */
+  background-repeat: no-repeat;  /* não repete */
+  background-attachment: fixed;  /* mantém a imagem fixa ao rolar a página */
+}
+
+
+
+/* ===========================
+   HEADER
+   =========================== */
+header {
+  background: #0b5827dc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.logo {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #EAEAEA;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #cecece;
+}
+
+/* ===========================
+   CARD FORMULÁRIO
+   =========================== */
+
+#tit2cadform{
+    color: black;
+    text-align: center;
+}
+
+#formPet {
+  background: rgb(255, 255, 255, 0.8);
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.8);
+  width: 100%;
+  max-width: 800px; /* card grande tipo ficha */
+  margin: 20px auto; /* centraliza horizontalmente */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
+}
+
+#formPet label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  color: black;
+  font-size: 1rem;
+}
+
+#formPet input,
+#formPet select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border: 2px solid #7e7e7e; /* borda visível */
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+#formPet input:focus,
+#formPet select:focus {
+  outline: none;
+  border-color: #3858B8; /* verde de destaque */
+}
+
+#formPet button {
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  background: #28da52;
+  color: #0b5827;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#formPet button:hover {
+  background: #5fd376;
+}
+
+/* ===========================
+   TABELA
+   =========================== */
+
+h2 {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
+
+table {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto 40px auto;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  background: #fff;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+th {
+  background: #0b5827;
+  color: #fff;
+  font-weight: bold;
+}
+
+td {
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover td {
+  background: #f4f4f4;
+}
+
+
+/* ===========================
+   FOOTER
+   =========================== */
+footer {
+  background: #0b5827dc; 
+  color: #fff;
+  text-align: center;
+  padding: 20px 15px;
+  margin-top: 40px; /* espaçamento em relação ao conteúdo */
+}
+
+.footer-info {
+  display: flex; 
+  flex-wrap: wrap; /* quebra em telas pequenas */
+  justify-content: center;
+  gap: 15px; 
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  color: #EAEAEA;
+}
+
+.footer-info span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+footer p {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+

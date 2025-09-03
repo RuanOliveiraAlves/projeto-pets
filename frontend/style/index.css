@@ -50,7 +50,7 @@ header {
 nav ul {
   list-style: none; /* Remove marcadores */
   display: flex; /* Lista horizontal */
-  gap: 20px; /* Espaçamento entre itens */
+  gap: 20px; /* Espaço entre itens */
 }
 
 nav a {
@@ -173,78 +173,163 @@ nav a:hover {
   background: white;
 }
 
-/* ===========================
-   CARDS DE SERVIÇOS
-   =========================== */
-
-.section-title{
-  text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.cards-container {
-  display: flex; /* Layout horizontal */
-  justify-content: center; /* Centraliza na página */
-  gap: 20px; /* Espaço entre os cards */
-  padding: 50px 20px; /* Espaço interno */
-  flex-wrap: wrap; /* Quebra de linha em telas menores */
-}
-
-.card {
-  background: #1c1c1c; /* Fundo escuro para contrastar com o fundo geral */
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* Sombra mais visível no fundo escuro */
-  width: 250px;
-  padding: 20px;
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px); /* Leve elevação ao passar mouse */
-  box-shadow: 0 6px 16px rgba(0,0,0,0.4); /* Sombra mais forte */
-}
-
-.card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-color: rgba(21, 255, 0, 0.781);
-}
-
-.card p {
-  font-size: 0.95rem;
-  color: #EAEAEA; /* Texto claro */
-}
-.card-cta{
-  margin-top: 15px;       /* Empurra o botão para a parte inferior do card */
-  background: #0b5827dc;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  text-align: center;
-  transition: background 0.3s;
-}
 
 /* ===========================
    FOOTER
    =========================== */
 footer {
   background: #0b5827dc; 
-  color: white;
+  color: #fff;
   text-align: center;
-  padding: 20px;
+  padding: 20px 15px;
+  margin-top: 40px; /* espaçamento em relação ao conteúdo */
 }
 
 .footer-info {
   display: flex; 
+  flex-wrap: wrap; /* quebra em telas pequenas */
   justify-content: center;
-  gap: 8px; 
+  gap: 15px; 
   margin-bottom: 10px;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: #EAEAEA;
+}
+
+.footer-info span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 footer p {
   font-size: 0.85rem;
   opacity: 0.9;
+}
+
+
+/* ===========================
+   CARDS DE SERVIÇOS
+   =========================== */
+
+
+/*//////////////// Modern Cards Petshop ////////////////////////////////////
+/* filepath: c:\Users\RUAN\Desktop\projeto-pets\frontend\style\index.css */
+
+.section-title{
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.modern-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+  padding: 48px 0;
+}
+
+.modern-card {
+  background: #23272f;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  overflow: hidden;
+  width: 290px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s, box-shadow 0.25s;
+  position: relative;
+}
+
+.modern-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.22);
+}
+
+.modern-card-img {
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  background: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modern-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.modern-card:hover .modern-card-img img {
+  transform: scale(1.08);
+}
+
+.modern-card-body {
+  padding: 28px 20px 24px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modern-card-icon {
+  background: linear-gradient(135deg, #0b5827dc 60%, #3858B8 100%);
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -38px;
+  margin-bottom: 14px;
+  box-shadow: 0 2px 8px rgba(56,88,184,0.12);
+  font-size: 2rem;
+  color: #fff;
+}
+
+.modern-card-icon i {
+  font-size: 32px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.modern-card h3 {
+  font-size: 1.18rem;
+  color: #21ff00;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: 'Segoe UI', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.modern-card p {
+  color: #eaeaea;
+  font-size: 1rem;
+  margin-bottom: 18px;
+  text-align: center;
+  min-height: 56px;
+}
+
+.modern-btn {
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 28px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(56,88,184,0.10);
+  cursor: pointer;
+  background:#3858B8;
+}
+
+.modern-btn:hover {
+  background: #3858b8b9;
+  transform: scale(1.08);
 }
